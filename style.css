@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+}
+
+.top-bar {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* alinha verticalmente */
+    width: 100%;
+}
+
+.logo {
+    padding-left: 250px; /* Espaço interno da esquerda */
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 500px;
+}
+
+.menu {
+    margin-left: auto;   /* empurra o menu pra direita */
+    padding-right: 160px; /* dá o espacinho da borda direita */
+    display: flex;
+}
+
+.menu a {
+    color: rgb(21, 199, 21);
+    text-decoration: none;
+    margin-left: 50px;
+    font-weight: 500;
+    font-size: 18px; /* aumenta o tamanho */
+  }
+
+.icone-seta {
+    width: 10px; /* ajuste o tamanho conforme sua imagem */
+    height: auto;
+}
+
+  /* Main com padding para compensar o menu fixo */
+  main {
+    padding-top: 60px; /* mesmo valor da altura da barra */
+    text-align: center;
+  }
+
+  .home {
+    background-color: #c0f5cd;
+    padding: 50px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza sem separar demais */
+    gap: 150px; /* Espaço entre texto e imagem (ajuste aqui) */
+  }
