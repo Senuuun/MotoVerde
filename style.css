@@ -48,8 +48,34 @@
   .home {
     background-color: #c0f5cd;
     padding: 50px 40px;
+    gap: 30px; /* controla a distância entre texto e imagem */
     display: flex;
     align-items: center;
     justify-content: center; /* Centraliza sem separar demais */
-    gap: 150px; /* Espaço entre texto e imagem (ajuste aqui) */
   }
+
+  .home .texto p {
+    margin: 10px 0;
+    margin-bottom: 30px; /* Espaço */
+    text-align: left;
+    max-width: 40%;
+  }
+
+  .home .texto h2 {
+    font-size: 50px;         /* Tamanho maior para título */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .home .imagemhome img {
+    .imagemhome {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+    }
+    
+  .imagemhome img {
+    width: 100%; /* ocupa bem o espaço */
+    max-width: 300px; /* ajuste como quiser */
+    }
