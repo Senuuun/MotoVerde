@@ -8,28 +8,30 @@
 .top-bar {
     background-color: whitesmoke;
     display: flex;
-    justify-content: space-between;
     align-items: center; /* alinha verticalmente */
-    width: 100%;
+    width: 100vw;
+    justify-content: space-between;
+    padding-left: 15em;
+    padding-right: 5em;
+    position: fixed;
+    height: 10vh;
 }
 
 .logo {
-    padding-left: 250px; /* Espaço interno da esquerda */
     font-size: 24px;
     font-weight: bold;
-    max-width: 500px;
+    width: 10em;
 }
 
 .menu {
-    margin-left: auto;   /* empurra o menu pra direita */
-    padding-right: 160px; /* dá o espacinho da borda direita */
     display: flex;
+    justify-content: space-between;
+    width: 30em;
 }
 
 .menu a {
     color: rgb(21, 199, 21);
     text-decoration: none;
-    margin-left: 50px;
     font-weight: 500;
     font-size: 18px; /* aumenta o tamanho */
   }
@@ -39,43 +41,62 @@
     height: auto;
 }
 
-  /* Main com padding para compensar o menu fixo */
-  main {
-    padding-top: 60px; /* mesmo valor da altura da barra */
-    text-align: center;
-  }
-
   .home {
     background-color: #c0f5cd;
-    padding: 50px 40px;
-    gap: 30px; /* controla a distância entre texto e imagem */
+    padding-top: 15vh;
+    padding-bottom: 4em;
+  }
+
+  .home button {
+    cursor: pointer;      /* mostra a "mãozinha" ao passar o mouse */
+    pointer-events: auto; /* garante que o botão receba eventos do mouse */
+    margin-left: 13em;
+    background-color: transparent; /* Fundo transparente, sem cor de fundo */
+    padding: 15px 20px;            /* Mesmo espaçamento interno que o botão roxo */
+    border-radius: 20px;           /* Bordas arredondadas iguais ao botão roxo */
+  }
+
+  #homes {
     display: flex;
+    justify-content: space-evenly; /* Centraliza sem separar demais */
     align-items: center;
-    justify-content: center; /* Centraliza sem separar demais */
+    
   }
 
-  .home .texto p {
-    margin: 10px 0;
-    margin-bottom: 30px; /* Espaço */
+  #homes .texto {
+    width: 30em;
     text-align: left;
-    max-width: 40%;
   }
 
-  .home .texto h2 {
+  #homes .texto h2 {
     font-size: 50px;         /* Tamanho maior para título */
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
   }
 
-  .home .imagemhome img {
-    .imagemhome {
-      width: 40%;
-      display: flex;
-      justify-content: center;
+  #imagemhome {
+    width: 20em; /* ocupa bem o espaço */
     }
-    
-  .imagemhome img {
-    width: 100%; /* ocupa bem o espaço */
-    max-width: 300px; /* ajuste como quiser */
-    }
+
+  #branco {
+    color: #333;
+    padding-top: 1em;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .secao-branca {
+    display: flex;
+  }
+
+  .secao-branca div {
+    display: flex;
+    flex: 1; /* nas colunas faz com que elas ocupem a mesma largura */
+    flex-direction: column;
+    padding: 5em;
+    padding-top: 4em;
+    gap: 1em;
+  }
