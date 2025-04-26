@@ -5,42 +5,6 @@
     font-family: 'Abel', sans-serif;
 }
 
-.top-bar {
-    background-color: whitesmoke;
-    display: flex;
-    align-items: center; /* alinha verticalmente */
-    width: 100vw;
-    justify-content: space-between;
-    padding-left: 15em;
-    padding-right: 5em;
-    position: fixed;
-    height: 10vh;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    width: 10em;
-}
-
-.menu {
-    display: flex;
-    justify-content: space-between;
-    width: 20em;
-}
-
-.menu a {
-    color: rgb(21, 199, 21);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 18px; /* aumenta o tamanho */
-  }
-
-.icone-seta {
-    width: 10px; /* ajuste o tamanho conforme sua imagem */
-    height: auto;
-}
-
   .home {
     background-color: #c0f5cd;
     padding-top: 15vh;
