@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login • MotoVerde</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header id="topbar"></header>
+    <main class="login-wrapper">
+        <img src="/MotoVerde/images/login/fundoLogin.webp" alt="Imagem de Login" id="login-image">
+    
+        <div class="login-formulario">
+          <h2>Entrar na sua conta</h2>
+          <form action="/login" method="POST">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+    
+            <button type="submit">Entrar</button>
+    
+            <p>Não tem uma conta? <a href="/MotoVerde/register/">Cadastre-se</a></p>
+          </form>
+        </div>
+
+    </main>
+    <script src="/MotoVerde/topbar/topbar.js"></script>
+</body>
+</html>

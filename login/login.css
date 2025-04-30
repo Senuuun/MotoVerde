@@ -1,0 +1,85 @@
+.login-wrapper {
+    display: flex;
+    min-height: 90vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .login-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-formulario {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+  }
+  
+  .login-formulario h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .login-formulario form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-formulario label {
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .login-formulario input {
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .login-formulario button {
+    margin-top: 2rem;
+    padding: 0.8rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-formulario button:hover {
+    background-color: #218838;
+  }
+  
+  .login-formulario p {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .login-formulario p a {
+    color: #28a745;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+  }
+  
+  .login-formulario p a:hover {
+    text-decoration: underline;
+  }
+  
+
+  
+  
