@@ -1,30 +1,31 @@
 .login-wrapper {
     display: flex;
-    min-height: 90vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 1vw;
+    justify-content: space-around;
   }
-  
-  .login-image {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
+
+  #login-image {
+    width: 65em;
+    margin-top: 20vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
   }
-  
+
   .login-formulario {
     flex: 1;
     padding: 3rem;
+    padding-top: 25vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fff;
   }
   
   .login-formulario h2 {
     margin-bottom: 2rem;
     font-size: 2rem;
-    color: #333;
+    color: #0a621f;
     text-align: center;
-    font-weight: 600;
   }
   
   .login-formulario form {
@@ -75,11 +76,3 @@
     text-decoration: none;
     margin-left: 4px;
   }
-  
-  .login-formulario p a:hover {
-    text-decoration: underline;
-  }
-  
-
-  
-  
