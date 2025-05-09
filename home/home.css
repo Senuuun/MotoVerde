@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
   .home {
@@ -17,6 +17,7 @@
     background-color: transparent; /* Fundo transparente, sem cor de fundo */
     padding: 15px 20px;            /* Mesmo espaçamento interno que o botão roxo */
     border-radius: 20px;           /* Bordas arredondadas iguais ao botão roxo */
+    margin-top: 1.5rem;
   }
 
   #homes {
@@ -25,6 +26,7 @@
   }
 
   #homes .home-texto {
+    color: #555;
     width: 30em;
     text-align: left;
   }
@@ -43,7 +45,7 @@
   #branco {
     color: #333;
     padding-top: 3em;
-    background-color: whitesmoke;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +53,7 @@
 
   .secao-branca {
     display: flex;
-    gap: 8em;
+    gap: 5em;
     padding: 4em 1em;
   }
 
@@ -100,12 +102,16 @@
     color: #333;
   }
 
+  .texto-verde p {
+    color: #555;
+  }
+
   #floripa {
     width: 30em;
     border-radius: 12px;
   }
 
-  .rodape {
+  footer {
   padding: 1.5rem;
   text-align: center;
   font-family: Arial, sans-serif;

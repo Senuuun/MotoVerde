@@ -1,21 +1,24 @@
 .login-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 10rem;
+    padding: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 1vw;
-    justify-content: space-around;
   }
 
   #login-image {
-    width: 65em;
-    margin-top: 20vh;
-    margin-left: 20vh;
-    margin-right: 20vh;
+    max-width: 100%;
+    max-width: 850px;
+    height: auto;
+    flex: 1 1 300px;
   }
 
   .login-formulario {
-    flex: 1;
-    padding: 3rem;
-    padding-top: 25vh;
+    flex: 1 1 250px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
