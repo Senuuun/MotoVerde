@@ -8,13 +8,14 @@
 .top-bar {
     background-color: whitesmoke;
     display: flex;
-    align-items: center; /* alinha verticalmente */
+    align-items: center;
     width: 100vw;
     justify-content: space-between;
     padding-left: 15em;
     padding-right: 5em;
     position: fixed;
     height: 10vh;
+    z-index: 999;
 }
 
 .logo {
