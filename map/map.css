@@ -1,12 +1,45 @@
+/* Estilização básica da página */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
 main {
-  padding-top: 12vh; /* ou 8vh, dependendo da altura da sua topbar */
+  padding-top: 12vh; /* espaço para a topbar */
 }
 
 #map {
   height: 85vh;
   width: 100%;
   max-width: 95%;
-  margin: 0 auto 2rem auto; /* top = 0, bottom = 2rem */
+  margin: 0 auto 2rem auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 0 !important;
+}
+
+.bateria-popup {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 6px 14px rgba(0, 128, 0, 0.2);
+}
+
+.bateria-popup div {
+  text-align: center;
+}
+
+.bateria-popup img {
+  height: 32px;
+  display: block;
+  margin: 0 auto;
 }

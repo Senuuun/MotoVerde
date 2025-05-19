@@ -39,13 +39,12 @@
   }
 
   #imagemhome {
-    width: 25em; /* ocupa bem o espaço */
+    width: 22em; /* ocupa bem o espaço */
     }
 
   #branco {
     color: #333;
     padding-top: 3em;
-
     display: flex;
     flex-direction: column;
     align-items: center;
