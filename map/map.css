@@ -43,3 +43,11 @@ main {
   display: block;
   margin: 0 auto;
 }
+
+.leaflet-popup-content-wrapper {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+}

@@ -11,13 +11,12 @@
 
   #login-image {
     max-width: 100%;
-    max-width: 850px;
+    max-width: 700px;
     height: auto;
-    flex: 1 1 300px;
   }
 
   .login-formulario {
-    flex: 1 1 250px;
+    flex: 1 1 150px;
     max-width: 300px;
     display: flex;
     flex-direction: column;

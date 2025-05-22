@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Forma de Pagamento • MotoVerde</title>
-  <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagamento • MotoVerde</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="topbar"></header>
-    <main>
 
-    </main>
-    <script src="/MotoVerde/topbar/topbar.js"></script>
+  <header id="topbar"></header>
+
+  <main>
+    <div class="container">
+      <div class="pagamento-box">
+
+        <!-- Lado esquerdo: scanner -->
+      <div class="scanner">
+        <h3>Pagamento com QR CODE</h3>
+        <img src="/MotoVerde/images/pagamento/QR_Scanner.webp" alt="Scanner de pagamento" />
+      </div>
+
+        <div class="divisor"></div>
+
+        <!-- Lado direito: formulário -->
+        <div class="formulario">
+          <h2>Pagamento com Cartão</h2>
+
+          <form>
+            <label for="numero">Codigo da Bateria</label>
+            <input type="text" id="numero" placeholder="1234 5678" />
+
+            <label for="numero">Número do Cartão</label>
+            <input type="text" id="numero" placeholder="1234 5678 9012 3456" />
+
+            <div class="dupla">
+              <div>
+                <label for="validade">Validade</label>
+                <input type="text" id="validade" placeholder="MM/AA" />
+              </div>
+              <div>
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" />
+              </div>
+            </div>
+
+            <label for="nome">Nome no Cartão</label>
+            <input type="text" id="nome" placeholder="João da Silva" />
+
+            <button type="submit">Pagar</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script src="/MotoVerde/topbar/topbar.js"></script>
 </body>
 </html>
