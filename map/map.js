@@ -5,9 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     attribution: '© OpenStreetMap colaboradores'
   }).addTo(mapa);
 
-  // Ponto do usuário com ícone personalizado
   const iconeUsuario = L.icon({
-    iconUrl: '../images/map/Pessoa.png', // Caminho para seu ícone
+    iconUrl: '../images/map/Pessoa.png', 
     iconSize: [40, 40],
     iconAnchor: [20, 40],
     popupAnchor: [0, -40]

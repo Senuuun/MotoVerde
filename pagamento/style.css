@@ -27,10 +27,10 @@ main {
 }
 
 .scanner {
-  white-space: nowrap; /* impede quebra de linha */
+  white-space: nowrap;
   display: flex;
-  flex-direction: column; /* empilha texto e imagem verticalmente */
-  align-items: center;    /* centraliza horizontalmente */
+  flex-direction: column;
+  align-items: center;   
   padding: 20px;
 }
 

@@ -12,34 +12,35 @@
   }
 
   .home button {
-    cursor: pointer;      /* mostra a "mãozinha" ao passar o mouse */
-    pointer-events: auto; /* garante que o botão receba eventos do mouse */
-    background-color: transparent; /* Fundo transparente, sem cor de fundo */
-    padding: 15px 20px;            /* Mesmo espaçamento interno que o botão roxo */
-    border-radius: 20px;           /* Bordas arredondadas iguais ao botão roxo */
+    cursor: pointer; 
+    pointer-events: auto; 
+    background-color: transparent; 
+    padding: 15px 20px;  
+    border-radius: 20px;   
     margin-top: 1.5rem;
   }
 
   #homes {
     display: flex;
-    justify-content: space-evenly; /* Centraliza sem separar demais */
+    justify-content: space-evenly;
   }
 
   #homes .home-texto {
     color: #555;
     width: 30em;
     text-align: left;
+    padding-top: 5vh;
   }
 
   #homes .home-texto h2 {
-    font-size: 50px;         /* Tamanho maior para título */
+    font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
   }
 
   #imagemhome {
-    width: 22em; /* ocupa bem o espaço */
+    width: 40em;
     }
 
   #branco {
@@ -83,7 +84,7 @@
   .secao-verde {
     background-color: #c0f5cd;
     display: flex;
-    justify-content: space-evenly; /* Centraliza sem separar demais */
+    justify-content: space-evenly;
     align-items: center;
     gap: 4em;
     padding: 4em 7em;
@@ -95,7 +96,7 @@
   }
 
   .texto-verde h2 {
-    font-size: 30px;         /* Tamanho maior para título */
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;

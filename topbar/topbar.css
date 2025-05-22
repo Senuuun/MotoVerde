@@ -34,10 +34,10 @@
     color: rgb(21, 199, 21);
     text-decoration: none;
     font-weight: 500;
-    font-size: 18px; /* aumenta o tamanho */
+    font-size: 18px;
   }
 
 .icone-seta {
-    width: 10px; /* ajuste o tamanho conforme sua imagem */
+    width: 10px;
     height: auto;
 }
