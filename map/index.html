@@ -4,17 +4,22 @@
   <meta charset="UTF-8">
   <title>Mapa • MotoVerde</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
   <link rel="stylesheet" href="map.css">
 </head>
-<body>
-  <header id="topbar"></header>
+  <body>
+    <header id="topbar"></header>
 
-  <main>
-    <div id="map"></div>
-  </main>
+    <main>
+      <div id="map">
+        <button id="botao-trajeto">Começar trajeto</button>
+        <button id="botao-terminar">Terminar Rota</button>
+      </div>
+    </main>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="/MotoVerde/topbar/topbar.js"></script>
-  <script src="map.js"></script>
-</body>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+    <script src="/MotoVerde/topbar/topbar.js"></script>
+    <script src="map.js"></script>
+  </body>
 </html>

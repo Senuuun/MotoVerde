@@ -5,8 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     attribution: '© OpenStreetMap colaboradores'
   }).addTo(mapa);
 
+  const botaoTrajeto = document.getElementById('botao-trajeto');
+  const botaoTerminar = document.getElementById('botao-terminar');
+
+  botaoTrajeto.style.display = 'none';
+  botaoTerminar.style.display = 'none';
+
   const iconeUsuario = L.icon({
-    iconUrl: '../images/map/Pessoa.png', 
+    iconUrl: '../images/map/Pessoa.png',
     iconSize: [40, 40],
     iconAnchor: [20, 40],
     popupAnchor: [0, -40]
@@ -20,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   marcadorUsuario.bindPopup('Você está aqui');
 
-  // Pontos de recarga
   const pontos = [
     { lat: -27.5954, lng: -48.5480, nome: 'Centro - MotoVerde', cargas: [100, 80, 40] },
     { lat: -27.5969, lng: -48.5515, nome: 'Mercado Público', cargas: [30, 60, 10] },
@@ -34,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { lat: -27.4400, lng: -48.4648, nome: 'Canasvieiras', cargas: [100, 90, 80] }
   ];
 
+  let destinoSelecionado = null;
+  let rota = null;
+
   pontos.forEach(ponto => {
     const marcador = L.marker([ponto.lat, ponto.lng]).addTo(mapa);
 
@@ -42,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
     marcador.on('click', () => {
       const bateriasHTML = ponto.cargas.map(nivel => {
         const imgSrc = nivel === 100
-          ? '../images/map/cargamin.png'
-          : '../images/map/cargamax.png';
+          ? '../images/map/cargamax.png'
+          : '../images/map/cargamin.png';
 
         return `
           <div>
@@ -61,6 +69,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
       marcador.getPopup().setContent(popupHTML);
       marcador.openPopup();
+
+      destinoSelecionado = [ponto.lat, ponto.lng];
+      botaoTrajeto.style.display = 'block';
     });
+  });
+
+  botaoTrajeto.addEventListener('click', () => {
+    if (rota) {
+      mapa.removeControl(rota);
+    }
+
+    rota = L.Routing.control({
+      waypoints: [
+        L.latLng(coordenadaUsuario),
+        L.latLng(destinoSelecionado)
+      ],
+      router: L.Routing.osrmv1({
+        serviceUrl: 'https://router.project-osrm.org/route/v1'
+      }),
+      routeWhileDragging: false,
+      show: false,
+      addWaypoints: false,
+      createMarker: function (i, wp, nWps) {
+        if (i === 0) {
+          return L.marker(wp.latLng, {
+            icon: iconeUsuario
+          }).bindPopup('Você está aqui');
+        } else {
+          return L.marker(wp.latLng);
+        }
+      }
+    }).addTo(mapa);
+
+    botaoTrajeto.style.display = 'none';
+    botaoTerminar.style.display = 'block';
+  });
+
+  botaoTerminar.addEventListener('click', () => {
+    if (rota) {
+      mapa.removeControl(rota);
+      rota = null;
+    }
+    botaoTerminar.style.display = 'none';
+  });
+
+  mapa.on('click', () => {
+    botaoTrajeto.style.display = 'none';
   });
 });
