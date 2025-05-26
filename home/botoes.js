@@ -2,6 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const botao = document.getElementById("botaoAventura");
 
     botao.addEventListener("click", function() {
-        window.location.href = "/MotoVerde/login/"; 
+        window.location.href = "/login/"; 
     });
 });

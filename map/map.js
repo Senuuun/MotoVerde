@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   botaoTerminar.style.display = 'none';
 
   const iconeUsuario = L.icon({
-    iconUrl: '/MotoVerde/images/map/Pessoa.png',
+    iconUrl: '/images/map/Pessoa.png',
     iconSize: [40, 40],
     iconAnchor: [20, 40],
     popupAnchor: [0, -40]
