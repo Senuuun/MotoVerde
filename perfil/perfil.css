@@ -1,0 +1,36 @@
+#perfil-container {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.perfil-box {
+  margin-top: 12vh; /* empurra para baixo da topbar */
+  display: flex;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 2em;
+  max-width: 800px;
+  width: 100%;
+  align-items: center;
+}
+
+.perfil-imagem img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 2em;
+  border: 3px solid #ddd;
+}
+
+.perfil-info h1 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.perfil-info p {
+  margin: 0.3em 0;
+  font-size: 1.1em;
+}

@@ -26,8 +26,9 @@
 
 .menu {
     display: flex;
-    justify-content: space-between;
-    width: 27em;
+    gap: 2em;
+    margin-left: auto;
+    margin-right: 2em;
 }
 
 .menu a {
@@ -40,4 +41,52 @@
 .icone-seta {
     width: 10px;
     height: auto;
+}
+
+.perfil-usuario {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 1em;
+}
+
+.perfil-container {
+  position: relative;
+  margin-left: 1em;
+}
+
+.perfil-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.perfil-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 120%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 999;
+  min-width: 120px;
+}
+
+.perfil-dropdown a {
+  display: block;
+  padding: 0.5em 1em;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.perfil-dropdown a:hover {
+  background-color: #f0f0f0;
+}
+
+.perfil-dropdown.show {
+  display: block;
 }
