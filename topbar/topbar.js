@@ -1,27 +1,31 @@
 function loadTopbarCSS() {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = '/topbar/topbar.css';
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = "/topbar/topbar.css";
   document.head.appendChild(link);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   loadTopbarCSS();
 
-  fetch('/topbar/topbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('topbar').innerHTML = data;
+  fetch("/topbar/topbar.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("topbar").innerHTML = data;
 
       const logado = localStorage.getItem("usuarioLogado") === "true";
+
       if (logado) {
-        const menuLinks = document.querySelectorAll(".menu a");
-        menuLinks.forEach(link => {
-          if (link.href.includes("login") || link.href.includes("register")) {
+        // Oculta os links de Login e Registro
+        const links = document.querySelectorAll(".menu a");
+        links.forEach(link => {
+          const href = link.getAttribute("href");
+          if (href.includes("login") || href.includes("register")) {
             link.style.display = "none";
           }
         });
 
+        // Adiciona a imagem de perfil e dropdown
         const topBarDiv = document.querySelector(".top-bar");
 
         const perfilContainer = document.createElement("div");
@@ -35,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const dropdown = document.createElement("div");
         dropdown.classList.add("perfil-dropdown");
         dropdown.innerHTML = `
-          <a href="/perfil">Ver Perfil</a>
+          <a href="/perfil/">Ver Perfil</a>
           <a href="#" id="logout">Logout</a>
         `;
 
@@ -43,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         perfilContainer.appendChild(dropdown);
         topBarDiv.appendChild(perfilContainer);
 
+        // Abre/fecha dropdown
         perfil.addEventListener("click", () => {
           dropdown.classList.toggle("show");
         });
@@ -53,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
 
-        // Mover o evento para cá — após o dropdown estar no DOM
+        // Logout
         const logoutLink = document.getElementById("logout");
         if (logoutLink) {
           logoutLink.addEventListener("click", (e) => {
@@ -62,6 +67,11 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "/login/";
           });
         }
+
+      } else {
+        // Se não estiver logado, esconde o link de pagamento
+        const pagamento = document.querySelector('.menu a[href="/pagamento/"]');
+        if (pagamento) pagamento.style.display = "none";
       }
     });
 });
