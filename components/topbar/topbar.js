@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const dropdown = document.createElement("div");
         dropdown.classList.add("perfil-dropdown");
         dropdown.innerHTML = `
-          <a href="/perfil/">Ver Perfil</a>
+          <a href="/perfil">Ver Perfil</a>
           <a href="#" id="logout">Logout</a>
         `;
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
           logoutLink.addEventListener("click", (e) => {
             e.preventDefault();
             localStorage.removeItem("usuarioLogado");
-            window.location.href = "/pages/login/login.html";
+            window.location.href = "/login";
           });
         }
       }

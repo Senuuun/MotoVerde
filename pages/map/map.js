@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
     marcador.on('click', () => {
       const bateriasHTML = ponto.cargas.map(nivel => {
         const imgSrc = nivel === 100
-          ? '../images/map/cargamax.png'
-          : '../images/map/cargamin.png';
+          ? '/images/map/cargamax.png'
+          : '/images/map/cargamin.png';
 
         return `
           <div>

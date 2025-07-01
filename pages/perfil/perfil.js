@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (logado !== "true") {
     alert("Você precisa estar logado para acessar o perfil.");
-    window.location.href = "/login/";
+    window.location.href = "/login";
     return;
   }
 

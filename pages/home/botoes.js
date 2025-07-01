@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const usuarioLogado = localStorage.getItem("usuarioLogado") === "true";
 
       if (usuarioLogado) {
-        window.location.href = "/pages/map/map.html";
+        window.location.href = "/map";
       } else {
-        window.location.href = "/pages/login/login.html";
+        window.location.href = "/login";
       }
     });
   }
