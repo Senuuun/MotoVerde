@@ -16,5 +16,5 @@ document.querySelector("form").addEventListener("submit", function (e) {
   localStorage.setItem("usuarioLogado", "true");
 
   alert("Cadastro realizado com sucesso!");
-  window.location.href = "/pages/index.html";
+  window.location.href = "/";
 });
