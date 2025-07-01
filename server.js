@@ -1,17 +1,18 @@
+// server.js
 const express = require('express');
 const path = require('path');
 
 const app = express();
 const PORT = 3000;
 
-// Servir arquivos estáticos (CSS, JS, imagens, etc.)
+// Servir arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/pages', express.static(path.join(__dirname, 'pages')));
 app.use('/components', express.static(path.join(__dirname, 'components')));
 
-// Rotas para páginas HTML dentro da pasta pages
+// Rota para o index.html que está na raiz do projeto
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'pages', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/login', (req, res) => {
