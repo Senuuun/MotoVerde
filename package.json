@@ -1,0 +1,15 @@
+{
+  "name": "motoverde",
+  "version": "1.0.0",
+  "description": "Mapa interativo para visualizar pontos de recarga de motos elétricas em Florianópolis. O sistema mostra o nível de carga das baterias em cada ponto e permite traçar rotas a partir da localização do usuário.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

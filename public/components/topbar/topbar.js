@@ -1,30 +1,39 @@
 function loadTopbarCSS() {
   const link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "/topbar/topbar.css";
+  link.href = "/components/topbar/topbar.css";
   document.head.appendChild(link);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   loadTopbarCSS();
 
-  fetch("/topbar/topbar.html")
+  fetch("/components/topbar/topbar.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("topbar").innerHTML = data;
 
       const logado = localStorage.getItem("usuarioLogado") === "true";
 
-      if (logado) {
-        // Oculta os links de Login e Registro
-        const links = document.querySelectorAll(".menu a");
-        links.forEach(link => {
-          const href = link.getAttribute("href");
+      const links = document.querySelectorAll(".menu a");
+
+      links.forEach(link => {
+        const href = link.getAttribute("href");
+
+        if (logado) {
+          // Oculta Login e Registro
           if (href.includes("login") || href.includes("register")) {
             link.style.display = "none";
           }
-        });
+        } else {
+          // Oculta Pagamento se não estiver logado
+          if (href.includes("pagamento")) {
+            link.style.display = "none";
+          }
+        }
+      });
 
+      if (logado) {
         // Adiciona a imagem de perfil e dropdown
         const topBarDiv = document.querySelector(".top-bar");
 
@@ -64,14 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
           logoutLink.addEventListener("click", (e) => {
             e.preventDefault();
             localStorage.removeItem("usuarioLogado");
-            window.location.href = "/login/";
+            window.location.href = "/pages/login/login.html";
           });
         }
-
-      } else {
-        // Se não estiver logado, esconde o link de pagamento
-        const pagamento = document.querySelector('.menu a[href="/pagamento/"]');
-        if (pagamento) pagamento.style.display = "none";
       }
     });
 });

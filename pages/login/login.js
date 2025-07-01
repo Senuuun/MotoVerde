@@ -13,7 +13,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
   if (usuarioSalvo.email === email && usuarioSalvo.senha === senha) {
     localStorage.setItem("usuarioLogado", "true");
-    window.location.href = "/index.html"; // redireciona para home
+    window.location.href = "/";
   } else {
     alert("E-mail ou senha incorretos!");
   }
