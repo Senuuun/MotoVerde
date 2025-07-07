@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const usuario = JSON.parse(localStorage.getItem("usuarioMotoVerde"));
 
   if (usuario) {
-    document.getElementById("nomeUsuario").textContent = usuario.nome;
+    document.getElementById("nomeUsuario").textContent = `${usuario.nome} ${usuario.sobrenome}`;
     document.getElementById("idadeUsuario").textContent = usuario.idade;
     document.getElementById("sexoUsuario").textContent = usuario.sexo;
     document.getElementById("emailUsuario").textContent = usuario.email;

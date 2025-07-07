@@ -1,20 +1,24 @@
 document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
+e.preventDefault();
 
-  const nome = document.getElementById("nome").value;
-  const idade = document.getElementById("idade").value;
-  const sexo = document.getElementById("sexo").value;
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("senha").value;
+const nome = document.getElementById("nome").value.trim();
+const sobrenome = document.getElementById("sobrenome").value.trim();
+const idade = document.getElementById("idade").value;
+const sexo = document.getElementById("sexo").value;
+const email = document.getElementById("email").value;
+const senha = document.getElementById("senha").value;
 
-  const usuario = { nome, idade, sexo, email, senha };
+if (!nome || !sobrenome || !idade || !sexo || !email || !senha) {
+alert("Por favor, preencha todos os campos.");
+return;
+}
 
-  // salva os dados
-  localStorage.setItem("usuarioMotoVerde", JSON.stringify(usuario));
+const usuario = { nome, sobrenome, idade, sexo, email, senha };
 
-  // seta a flag de login como "true"
-  localStorage.setItem("usuarioLogado", "true");
+localStorage.setItem("usuarioMotoVerde", JSON.stringify(usuario));
+localStorage.setItem("usuarioLogado", "true");
 
-  alert("Cadastro realizado com sucesso!");
-  window.location.href = "/";
+alert("Cadastro realizado com sucesso!");
+window.location.href = "/";
 });
+
